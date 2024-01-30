@@ -79,8 +79,12 @@ jobs:
         run: |
           pwd
           ls -l
+      - name: Log Next.js Config
+        run: cat next.config.mjs
       - name: List build output
         run: ls -l out
+      
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
